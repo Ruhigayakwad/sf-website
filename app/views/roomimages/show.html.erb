@@ -1,0 +1,38 @@
+
+<link rel="stylesheet" type="text/css"  href="assets/stylesheets/show_room.css">
+<link rel="stylesheet" type="text/css"  href="assets/stylesheets/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+<div class="parent1">
+ <div class= "child1">
+    <% if @roomimage.photo.attached? %>
+      <%= image_tag (@roomimage.photo), style: "width: 200px; height:200px;" , class: "img" %><br>
+    <% end %>
+  </div>
+      
+  <div class="child1"> 
+    <h1> About Room </h1>     
+    <h5><%= @roomimage.name %></h5>
+  </div>
+  
+  <div>
+    <% if @roomimage.pictures.attached? %>
+      <% @roomimage.pictures.each do |picture| %>
+         <%= image_tag(picture, :class => "img2") %>
+         <% if current_user %>
+           <%= link_to "Remove", delete_image_room_roomimage_path(@roomimage,picture.id), data: { 
+                     turbo_method: :delete, 
+                     turbo_confirm: "Are you sure?" }  %>
+          <% end %>
+      <% end %> 
+    <% end %> 
+  <div>
+  
+  <% if current_user %>
+      <%= link_to "Delete", room_roomimage_path(@roomimage.room,@roomimage), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?" },class:"btn-custom1" %><br>
+      <%= link_to "Edit",edit_room_roomimage_path(@roomimage.room,@roomimage),class:"btn-custom1" %><br>
+  <% end %>
+  <%# <%= link_to "Back" ,root_path,class:"btn-custom1" %> 
+</div>
+

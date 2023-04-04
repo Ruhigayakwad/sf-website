@@ -1,0 +1,8 @@
+<h1> User List </h1>
+<% @user.each do |user| %>
+    <%= link_to user.name,userdetail_path(user) %><br>
+<% end %>
+         
+
+<%= link_to "New User" , new_userdetail_path(@user)%> ||
+<%= link_to "Back" , rooms_path %>

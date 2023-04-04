@@ -1,0 +1,9 @@
+<h1>User Details</h1>
+
+<p class="user-show"><strong class="user-show"> Name: </strong><%= @user.name %></p>
+<p class="user-show"><strong class="user-show">Phone No.: </strong><%= @user.phoneno %></p>
+<p class="user-show"><strong class="user-show">Email: </strong><%= @user.email %></p><br>
+<%= link_to "Delete", userdetail_path(@user), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?" },class:"btn-custom1" %><br>
+<%= link_to ' Edit ', edit_userdetail_path(@user),class:"btn-custom1" %>

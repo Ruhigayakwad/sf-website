@@ -1,0 +1,12 @@
+<h1>Rooms Category </h1>
+
+<ul>
+  <% @room.each do |room| %>
+    <li>
+      <%=link_to room.name, room%>
+    </li>
+  <% end %>
+</ul>
+<% if current_user %>
+ <%= link_to "New Room Category", new_room_path %>
+<% end %>

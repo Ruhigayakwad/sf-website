@@ -1,0 +1,26 @@
+
+<%=  form_for Userdetail.new , :id => 'contactForm' do |form|  %>
+  <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <%= form.text_field :name , id:"name", class:"form-control", placeholder:"Name", style: "color: #b9936c"%>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <%= form.text_field :phoneno, id:"name", class:"form-control", placeholder:"Phone No.", style: "color: #b9936c" %>
+                 <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <%= form.email_field :email, id:"name", class:"form-control", placeholder:"E-mail", style: "color: #b9936c" %>
+                <p class="help-block text-danger"></p>
+          </div>
+          <div id="success"></div>
+            <%= form.submit"Send Design" , class:"btn-custom" %>
+           </div>
+    </div>
+  </div>
+<% end %>

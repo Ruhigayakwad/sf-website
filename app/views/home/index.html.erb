@@ -1,0 +1,76 @@
+ <%= javascript_include_tag "main" %>
+     <%= javascript_include_tag "bootstrap" %>
+     <%= javascript_include_tag "contact_me" %>
+     <%= javascript_include_tag "jqBootstrapValidation" %>
+     <%= javascript_include_tag "jquery.1.11.1" %>
+     <%= javascript_include_tag "jquery.isotope" %>
+     <%# <%= javascript_include_tag "jssor.slidert-28.1.0.min" %> 
+     <%= javascript_include_tag "nivo-lightbox" %>
+     <%= javascript_include_tag "SmoothScroll" %>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <input type="radio" id="s-1" name="slider-control" checked="checked">
+<input type="radio" id="s-2" name="slider-control">
+<input type="radio" id="s-3" name="slider-control">
+<div class="js-slider">
+  <figure class="js-slider_item img-1">
+    <div class="js-slider_img">
+      <%= image_tag "bg3.jpg", class:"c-img-w-full",  alt:""%>
+    
+  </figure>
+  <figure class="js-slider_item img-2">
+    <div class="js-slider_img">
+       <%= image_tag "bg.jpg", class:"c-img-w-full",  alt:""%></div>
+    
+  </figure>
+  <figure class="js-slider_item img-3">
+    <div class="js-slider_img">
+       <%= image_tag "bg-2.jpg", class:"c-img-w-full",  alt:""%></div>
+    
+  </figure>
+  <div class="js-slider_nav">
+    <label class="js-slider_nav_item s-nav-1 prev" for="s-3"></label>
+    <label class="js-slider_nav_item s-nav-1 next" for="s-2"></label>
+    <label class="js-slider_nav_item s-nav-2 prev" for="s-1"></label>
+    <label class="js-slider_nav_item s-nav-2 next" for="s-3"></label>
+    <label class="js-slider_nav_item s-nav-3 prev" for="s-2"></label>
+    <label class="js-slider_nav_item s-nav-3 next" for="s-1"></label>
+  </div>
+  <div class="js-slider_indicator">
+    <div class="js-slider-indi indi-1"></div>
+    <div class="js-slider-indi indi-2"></div>
+    <div class="js-slider-indi indi-3"></div>
+  </div>
+</div>
+<div id="about">
+    <div class="container">
+      <div class="section-title text-center center">
+        <h2>WHO ARE WE</h2>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-6 text-center"> <%= image_tag "about.jpg", class:"img-responsive",alt:"image" %> </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="about-text">
+            <h3>The FACTORY </h3>
+            <p></p>
+            <h3>How We Work</h3>
+            <p>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%# services %>
+   
+
+  
+</body>
+
+
+
+<%# <% if user_signed_in? %>  
+  
+  <%# <%= button_to "Sign out", destroy_user_session_path, method: :delete %>  
+<%# <% else %> 
+  <%# <%= button_to "Sign in", new_user_session_path %>  
+<%# <% end %> 

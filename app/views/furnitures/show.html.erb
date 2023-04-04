@@ -1,0 +1,20 @@
+<h1><%= @furniture.name %></h1>
+
+<% if @furniture.images.attached? %>
+  <% @furniture.images.each do |image| %>
+    <%= image_tag(image, style: "width: 50; height: 50") %>
+    <% if current_user %>
+     <%= button_to "Remove", delete_image_room_furniture_path(@furniture,image.id), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?" },class:"btn-custom1" %><br>
+    <% end %>
+  <% end %>
+<% end %>
+<% if current_user %>
+ <%= link_to "Delete", room_furniture_path(@furniture.room,@furniture), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?" },class:"btn-custom1",class:"btn-custom1" %><br>
+ <%= link_to "Edit" , edit_room_furniture_path(@furniture.room, @furniture)%> ||
+ 
+<% end %>
+<%# <%= link_to "Back" ,root_path, class:"btn-custom1"%> 

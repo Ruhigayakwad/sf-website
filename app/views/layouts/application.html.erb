@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sf</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+   
+    <%= stylesheet_link_tag "application.css", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "header.css", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "bootstrap.css", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "footer.css", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "main.css", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+     <%= javascript_include_tag "main" %>
+     <%= javascript_include_tag "bootstrap" %>
+     <%= javascript_include_tag "contact_me" %>
+     <%= javascript_include_tag "jqBootstrapValidation" %>
+     <%= javascript_include_tag "jquery.1.11.1" %>
+     <%= javascript_include_tag "jquery.isotope" %>
+     <%# <%= javascript_include_tag "jssor.slidert-28.1.0.min" %> 
+     <%= javascript_include_tag "nivo-lightbox" %>
+     <%= javascript_include_tag "SmoothScroll" %>
+    
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <%= render "shared/header"%>  
+    <%= yield %>
+    <%= render "shared/footer"%> 
+  </body>
+</html>

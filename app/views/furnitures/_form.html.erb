@@ -1,0 +1,14 @@
+<%= form_with model: [ @room, @room.furnitures.build ] do |form| %>
+  
+  <div>
+    <%= form.label :name,class: "form-label" %>
+    <%= form.text_field :name, class:"form-text" , style: "color: #b9936c" %>
+  </div>
+  <div>
+    <%= form.label :images,class: "form-label" %><br>
+    <%= form.file_field :images , :multiple => true, class:"form-text" , style: "color: #b9936c" %>
+  </div>
+  <div>
+    <%= form.submit "Create", class:"btn-custom" %>
+  </div>
+<% end %>

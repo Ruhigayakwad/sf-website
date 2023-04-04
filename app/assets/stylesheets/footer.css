@@ -1,0 +1,29 @@
+#footer {
+	background: #f4af0a;
+	padding: 1px 0 5px 0;
+}
+#footer .social {
+	margin-bottom: 50px;
+}
+#footer .social ul li {
+	display: inline-block;
+	margin: 0 20px;
+}
+#footer .social i.fa {
+	font-size: 26px;
+	padding: 4px;
+	color: #e6e2d3;
+	transition: all 0.3s;
+}
+#footer .social i.fa:hover {
+	color: #eee;
+}
+#footer p {
+	font-size: 15px;
+}
+#footer a {
+	color: #b9936c;
+}
+#footer a:hover {
+	color: #b9936c;
+}

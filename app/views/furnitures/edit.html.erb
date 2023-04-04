@@ -1,0 +1,15 @@
+<h1> Edit </h1>
+
+<%= form_with model: @furniture, url:room_furniture_path(@furniture.room,@furniture) do |form| %>
+   <p>
+    <%= form.label :name,class: "form-label"  %>
+    <%= form.text_field :name,class:"form-text" , style: "color: #b9936c" %>
+  </p>
+  <div>
+    <%= form.label :images,class: "form-label"%>
+    <%= form.file_field :images, :multiple => true, class:"form-text" , style: "color: #b9936c" %>
+  </div>
+  <p>
+    <%= form.submit "Edit", class: "btn-custom" %>
+  </p>
+<% end %>
